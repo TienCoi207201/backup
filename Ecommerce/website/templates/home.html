@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Trang chủ{% endblock %}
+
+{% block content %}
+    Đây là trang chủ
+    <a href={% url "signin" %}>Đăng nhập</a>
+    <a href>Đăng ký</a>
+    {% for data in data %}
+        <p>{{data.name}}</p>
+        <p>{{data.age}}</p>
+    {% endfor %}
+{% endblock %}
